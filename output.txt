@@ -1,0 +1,28 @@
+ hello tasbih 
+ fs.readFile("test1.txt", "utf8", (err, data) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+
+    text1 = data;
+    count++;
+
+    if (count === 2) {
+        event.emit("filesReady");
+    }
+});
+ hello tssbih2
+ fs.readFile("test2.txt", "utf8", (err, data) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+
+    text2 = data;
+    count++;
+
+    if (count === 2) {
+        event.emit("filesReady");
+    }
+});
